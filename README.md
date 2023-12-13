@@ -1,6 +1,6 @@
 <h1>The Website for the BHS Astronomy Club</h1>
 #Using Vanilla TypeScript
-An accessible website that's used by members of the BHS Astronomy Club to organize events and distribute info. Does not use any boilerplate or bundling program.
+An accessible website that's used by members of the BHS Astronomy Club to organize events and distribute info. Does not use any boilerplate or bundling program. Also contains the vscode launch profiles that I prefer, along with the necessary ENV variables.
 
 By [Erasmusss]https://github.com/Erasmusss
 
@@ -17,6 +17,8 @@ By [Erasmusss]https://github.com/Erasmusss
     <li>winston</li>
 </ul>
 <h6>Also in package.json</h6>
+
+In terms of ENV variables, there's PORT, MAINPAT (for the main html page), DEVPAT (for the dev html page), and DATAPAT (for the data json file).
 
 ---
 <h2>Tasks*</h2>
