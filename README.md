@@ -16,7 +16,7 @@ By [Erasmusss](https://github.com/Erasmusss)
     <li>uuid</li>
     <li>winston</li>
 </ul>
-<h6>Also in [package.json](https://github.com/Erasmusss/BHS_Astronomy/blob/main/package.json)</h6>
+<h6>Also in <a href="https://github.com/Erasmusss/BHS_Astronomy/blob/main/package.json">package.json</a> </h6>
 
 ---
 <h2>Tasks*</h2>
