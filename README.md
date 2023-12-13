@@ -33,12 +33,12 @@ By [Erasmusss]https://github.com/Erasmusss
 
 ---
 <h2>Commits</h2>
-<h3>**12/13/2023**:</h3>
+<h3>12/13/2023:</h3>
 * added basic events CRUD API
 * added authentication key system-doesn't have actual function yet
 * set up basic structure and main page
 * set up basic debugging
 
-<h3>**12/13/2023</h3>
+<h3>12/13/2023</h3>
 * added basic gallery CRUD API
 * started working on css and html for mainpage
