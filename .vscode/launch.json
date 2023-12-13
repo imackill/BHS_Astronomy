@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "command": "npm start",
+            "name": "Dev",
+            "request": "launch",
+            "type": "node-terminal",
+            "env": {
+                "PORT":"8080",
+                "MAINPAT":"public/main.html",
+                "DEVPAT":"public/devlanding.html",
+                "DATAPAT":"src/data.json",
+                "NODE_ENV":"development"
+            }
+        },
+        {
+            "command": "npm start",
+            "name": "Production",
+            "request": "launch",
+            "type": "node-terminal",
+            "env": {
+                "PORT":"8080",
+                "MAINPAT":"public/main.html",
+                "DEVPAT":"public/devlanding.html",
+                "DATAPAT":"src/data.json",
+                "NODE_ENV":"production"
+            }
+        }
+    ]
+}
