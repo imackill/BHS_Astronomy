@@ -2,7 +2,7 @@
 #Using Vanilla TypeScript
 An accessible website that's used by members of the BHS Astronomy Club to organize events and distribute info. Does not use any boilerplate or bundling program.
 
-By [Erasmusss]https://github.com/Erasmusss
+By [Erasmusss](https://github.com/Erasmusss)
 
 ---
 <h2>Dependencies</h2>
@@ -16,7 +16,7 @@ By [Erasmusss]https://github.com/Erasmusss
     <li>uuid</li>
     <li>winston</li>
 </ul>
-<h6>Also in package.json</h6>
+<h6>Also in [package.json](https://github.com/Erasmusss/BHS_Astronomy/blob/main/package.json)</h6>
 
 ---
 <h2>Tasks*</h2>
