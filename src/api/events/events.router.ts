@@ -58,7 +58,9 @@ sEventRouter.put('/events/:id', async(req: Request, res: Response) => {
 
         if(eventExisting){
             await sEventService.update(id, updateParams);
-            res.status(204).send(`Event ${eventExisting.id} updated successfully.`);
+            res.status(204).send(`Event ${id} updated successfully.`);
+        }else{
+            res.status(404).send(`Event ${id} not found.`);
         }
     }catch(err:any){
         res.status(500).send(err.message);

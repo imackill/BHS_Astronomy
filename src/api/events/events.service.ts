@@ -5,16 +5,7 @@ import { sBaseEvent, sEvent } from "./event.interface";
 import { sEvents } from "./events.interface";
 
 //memory store
-let events: sEvents = {
-    "1":{
-        id:'',
-        name:'',
-        date: new Date(0),
-        time: 0,
-        description:'',
-        location:'',
-    }
-};
+let events: sEvents = {};
 
 //methods
 

@@ -4,6 +4,7 @@ import {v4 as uuidv4} from 'uuid';
 import * as fs from 'fs';
 import * as path from 'path';
 import { sEventRouter } from './api/events/events.router';
+import { GalleryRouter } from './api/gallery/gallery.router';
 import { logger } from './util/logger';
 
 let basepath = process.env.NODE_ENV == 'development' ? `src`: `dist`;
@@ -11,7 +12,7 @@ let basepath = process.env.NODE_ENV == 'development' ? `src`: `dist`;
 const app = express();
 
 if (process.env.NODE_ENV !== "production") {
-    logger.debug("Logging initialized at debug level");
+    logger.debug(`Logging initialized at debug level on date ${Date.now()}`);
 }
 
 function genauth(pat:string){
@@ -24,7 +25,8 @@ function genauth(pat:string){
     return key;
 }
 
-app.use('/api/events',sEventRouter);
+app.use('/api/', sEventRouter);
+app.use('/api/', GalleryRouter);
 
 app.use(express.static(path.join(__dirname, `../public`)));
 
