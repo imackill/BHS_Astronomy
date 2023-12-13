@@ -2,7 +2,7 @@
 #Using Vanilla TypeScript
 An accessible website that's used by members of the BHS Astronomy Club to organize events and distribute info. Does not use any boilerplate or bundling program. Also contains the vscode launch profiles that I prefer, along with the necessary ENV variables.
 
-By [Erasmusss]https://github.com/Erasmusss
+By [Erasmusss](https://github.com/Erasmusss)
 
 ---
 <h2>Dependencies</h2>
@@ -16,7 +16,7 @@ By [Erasmusss]https://github.com/Erasmusss
     <li>uuid</li>
     <li>winston</li>
 </ul>
-<h6>Also in package.json</h6>
+<h6>Also in <a href="https://github.com/Erasmusss/BHS_Astronomy/blob/main/package.json">package.json</a> </h6>
 
 In terms of ENV variables, there's PORT, MAINPAT (for the main html page), DEVPAT (for the dev html page), and DATAPAT (for the data json file).
 
@@ -35,12 +35,12 @@ In terms of ENV variables, there's PORT, MAINPAT (for the main html page), DEVPA
 
 ---
 <h2>Commits</h2>
-<h3>**12/13/2023**:</h3>
+<h3>12/13/2023:</h3>
 * added basic events CRUD API
 * added authentication key system-doesn't have actual function yet
 * set up basic structure and main page
 * set up basic debugging
 
-<h3>**12/13/2023</h3>
+<h3>12/13/2023</h3>
 * added basic gallery CRUD API
 * started working on css and html for mainpage
