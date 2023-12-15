@@ -36,11 +36,11 @@ In terms of ENV variables, there's PORT, MAINPAT (for the main html page), DEVPA
 ---
 <h2>Commits</h2>
 <h3>12/13/2023:</h3>
-* added basic events CRUD API
-* added authentication key system-doesn't have actual function yet
-* set up basic structure and main page
-* set up basic debugging
+* added basic events CRUD API <br />
+* added authentication key system-doesn't have actual function yet <br />
+* set up basic structure and main page <br />
+* set up basic debugging <br />
 
 <h3>12/13/2023</h3>
-* added basic gallery CRUD API
-* started working on css and html for mainpage
+* added basic gallery CRUD API <br />
+* started working on css and html for mainpage <br />
