@@ -24,10 +24,10 @@ In terms of ENV variables, there's PORT, MAINPAT (for the main html page), DEVPA
 <h2>Tasks*</h2>
 
 - [x] Initial Setup
-- [ ] Remote Editing/File Upload-CRUD API
-- [ ] Custom (dynamic) Gallery Element
-- [ ] Custom (dynamic) Schedule Element
-- [ ] Set Up Main Page
+- [x] Remote Editing/File Upload-CRUD API
+- [x] Custom (dynamic) Gallery Element
+- [x] Custom (dynamic) Schedule Element
+- [x] Set Up Main Page
 - [ ] Set Up Dev Page
 - [ ] Host on WordPress (or Render): [link here]
 
@@ -44,3 +44,7 @@ In terms of ENV variables, there's PORT, MAINPAT (for the main html page), DEVPA
 <h3>12/13/2023</h3>
 * added basic gallery CRUD API
 * started working on css and html for mainpage
+
+<h3>12/16/2023</h3>
+* Finished overall main page with elements
+* elements use CRUD API for data (not thoroughly tested)
