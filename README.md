@@ -1,5 +1,5 @@
 <h1>The Website for the BHS Astronomy Club</h1>
-#Using Vanilla TypeScript
+Using Vanilla TypeScript
 An accessible website that's used by members of the BHS Astronomy Club to organize events and distribute info. Does not use any boilerplate or bundling program. Also contains the vscode launch profiles that I prefer, along with the necessary ENV variables.
 
 By [Erasmusss](https://github.com/Erasmusss)
@@ -36,15 +36,20 @@ In terms of ENV variables, there's PORT, MAINPAT (for the main html page), DEVPA
 ---
 <h2>Commits</h2>
 <h3>12/13/2023:</h3>
-* added basic events CRUD API
-* added authentication key system-doesn't have actual function yet
-* set up basic structure and main page
-* set up basic debugging
+* added basic events CRUD API <br />
+* added authentication key system-doesn't have actual function yet <br />
+* set up basic structure and main page <br />
+* set up basic debugging <br />
 
 <h3>12/13/2023</h3>
+<<<<<<< HEAD
 * added basic gallery CRUD API
 * started working on css and html for mainpage
 
 <h3>12/16/2023</h3>
 * Finished overall main page with elements
 * elements use CRUD API for data (not thoroughly tested)
+=======
+* added basic gallery CRUD API <br />
+* started working on css and html for mainpage <br />
+>>>>>>> 951ad0ba0ff059d6db998e812b0a952038ca3d6b
