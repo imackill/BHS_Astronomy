@@ -16,11 +16,11 @@ class AstronomySchedule{
         });
     }
     toHTML(){
-        if(this.render && this.cell_count > 0){
+        if(this.data.length > 0){
             let columns: string = "";
             this.data.forEach(elem => {
                 let event = this.genElem(elem);
-                columns.concat(event);
+                columns = columns.concat(event);
             });
             let body: string = `<tbody id="${this.id}" class="table_body"><tr>${columns}</tr></tbody>`;
             let wrapper: string = `<table class="table">${body}</table>`;
@@ -31,20 +31,20 @@ class AstronomySchedule{
         }
     }
     genElem(event: any){
-        let html: string = `
-            <td id="${event.id}">
-                <h3 class="event_title">${event.name}</h3>
+        let elem: string = `
+            <td class="event_square" id="${event.id}">
+                <h3 class="event_title">${event.name}</h3><br />
                 <div class="event_content">
-                    <a class="event_datetime">${event.date}, ${event.time}</a>
-                    <a class="event_text">${event.description}</a>
+                    <a class="event_datetime">${event.date}, ${event.time}</a><br />
+                    <a class="event_text">${event.description}</a><br />
                 </div>
             </td>
         `;
-        return html;
+        return elem;
     }
     fetch_schedule = async (): Promise<Array<any>> => {
         let raw = await fetch(`${window.location.origin}/api/events/`);
-        let data: Array<any> = await raw.json().catch(e => console.error(e.message));;
+        let data: Array<any> = await raw.json().catch(e => console.error(e.message));
         return data;
     }
 }
@@ -75,6 +75,7 @@ class AstronomyGallery{
     constructor(id: string){
         this.id = id;
         this.render = false;
+        this.html = "";
         this.fetch_gallery().then(res => {
             this.render = true;
             this.data = res;
@@ -83,9 +84,8 @@ class AstronomyGallery{
     }
     toHTML(){
         if(this.data.length > 0){
-            this.html = ``;
             this.data.forEach(elem => {
-                this.html.concat(this.genElem(elem));
+                this.html = this.html.concat(this.genElem(elem));
             });
             return;
         }else{
@@ -93,8 +93,8 @@ class AstronomyGallery{
         }
     }
     genElem(image: any){
-        let content = `<img src="${image.url} alt="${image.description}(${image.date})" />"`;
-        let wrapper = `<div id="${image.id}">${content}</div>`;
+        let content = `<img class="astro_img" src="${image.url}" alt="${image.description}(${image.date})" />"`;
+        let wrapper = `<div class="img_wrapper" id="${image.id}">${content}</div>`;
         return wrapper;
     }
     fetch_gallery = async (): Promise<Array<any>> => {

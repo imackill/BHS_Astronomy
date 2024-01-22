@@ -65,6 +65,7 @@ body{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: 4px solid #c85600;
+    background-color: #C70039;
     height: 20%;
     width: 60%;
     margin: auto;
@@ -76,9 +77,22 @@ body{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: 4px solid #c85600;
+    background-color: #C70039;
     height: 50%;
     width: 60%;
     margin: auto;
     margin-top: 5%;
     position: relative;
+    overflow: scroll;
+}
+
+.img_wrapper{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.astro_img{
+    width: auto;
+    height: 100%;
 }

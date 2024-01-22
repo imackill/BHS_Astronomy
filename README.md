@@ -15,6 +15,7 @@ By [Erasmusss](https://github.com/Erasmusss)
     <li>typescript</li>
     <li>uuid</li>
     <li>winston</li>
+    <li>multiparty</li>
 </ul>
 <h6>Also in <a href="https://github.com/Erasmusss/BHS_Astronomy/blob/main/package.json">package.json</a> </h6>
 

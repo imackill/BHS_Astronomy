@@ -1,6 +1,7 @@
 import * as express from 'express';
 import { Request, Response} from 'express';
 import * as fs from 'fs';
+import { textParser } from '../server';
 
 function auth(key:string){
     let buff = fs.readFileSync(process.env.DATAPAT);
@@ -10,17 +11,17 @@ function auth(key:string){
 
 export const AuthRouter = express.Router();
 
-AuthRouter.get('auth/:key', async(req: Request, res: Response) => {
-    const authkey = req.params.authkey;
-    try{
-        let authbool = auth(authkey);
-        if(authbool){
-            res.status(200).send(`Authentication Valid.`);
-            //Do some auth stuff (probably have devlanding use this route)
-        }else{
-            res.status(401).send(`401: Forbidden.`);
+AuthRouter.post('/auth/', async(req: Request, res: Response) => {
+    textParser(req, res, () => {
+        try{
+            let authbool = auth(req.body);
+            if(authbool){
+                res.status(200).send(`Authentication Valid.`);
+            }else{
+                res.status(401).send(`401: Forbidden.`);
+            }
+        }catch(err:any){
+            res.status(500).send(err.message);
         }
-    }catch(err:any){
-        res.status(500).send(err.message);
-    }
+    });
 });

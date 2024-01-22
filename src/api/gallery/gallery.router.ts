@@ -2,6 +2,7 @@ import * as express from 'express';
 import { Response, Request } from 'express';
 import * as GalleryService from './gallery.service';
 import { BaseImage, Image } from './image.interface';
+//TODO: add image uploading, but finish other tests first!
 
 export const GalleryRouter = express.Router()
 

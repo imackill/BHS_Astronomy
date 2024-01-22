@@ -1,0 +1,63 @@
+/*TODO: Add color maybe*/
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.devcontent-true{
+    visibility: visible;
+    display: block;
+}
+
+.devcontent-false{
+    visibility: hidden;
+}
+
+.auth-true{
+    visibility: hidden;
+}
+
+.auth-false{
+    visibility: visible;
+}
+
+.overlay_gal, .overlay_sch {
+    height: 100%;
+    width: 100%;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    transition: 0.25s opacity;
+    -webkit-transition: 0.25s opacity;
+    background: -webkit-radial-gradient(rgba(127, 127, 127, 0.5),
+                                        rgba(127, 127, 127, 0.5) 35%,
+                                        rgba(0, 0, 0, 0.7));
+    bottom: 0;
+    display: -webkit-box;
+    left: 0;
+    padding: 20px;
+    padding-bottom: 130px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+  }
+
+.devpanel_gal-false, .devpanel_sch-false {
+    visibility: hidden;
+}
+
+.devpanel_gal-true, .devpanel_sch-true {
+    visibility: visible;
+}
+
+.send_form{
+    padding: 10%;
+    background-color: white;
+    border: 4px solid #505050;
+    width: 60%;
+    height: 60%;
+}
+
+.send_input{
+    display: block;
+}

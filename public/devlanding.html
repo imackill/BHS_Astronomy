@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--Ok, so there isn't any way I can really import the interfaces into this without a framework or bundler or an annoying workaround
+and I am way to lazy to implement any of those at this point, so I will just use the "any" type and send a json
+for the dev landing creating elements or I'll just copy paste the type definitions,
+I do not want to start over at this point and the website does not have to be 100% percent optimized
+I don't care at this point-->
+<html>
+    <head>
+        <title>Dev Landing</title>
+        <link rel="stylesheet" href="./css/devlanding.css">
+    </head>
+    <body>
+        <div id="app">
+            <form class="auth-false" id="authwindow">
+                <label for="authkey">Enter key:</label>
+                <input type="password" id="authkey" required />
+                <input type="submit" value="Submit" />
+            </form>
+            <div id="devcontent" class="devcontent-false">
+                DEV CONTENT
+                <!--Image Stuff-->
+                <input class="overlaybtn" id="addimage" type="button" value="Add Image" onclick="opengallery()">
+                    <!--Add image window-->
+                <div class="devpanel_gal-false" id="devpanel_gal">
+                    <div class="overlay_gal" id="galleryparams">
+                        <form action="" method="post" class="send_form" id="gallery_form">
+                            <label for="image_name">Image Name</label>
+                            <input id="image_name" class="send_input" type="text"><br />
+                            <label for="image_file">Upload File Here (png, jpg, jpeg)</label>
+                            <input id="image_file" class="send_input" type="file" accept=".png,.jpg,.jpeg"><br />
+                            <label for="image_date">Image Date</label>
+                            <input id="image_date" class="send_input"type="date"><br />
+                            <label for="image_description">Image Description</label>
+                            <input id="image_description" class="send_input" type="text"><br />
+                            <input type="button" class="send_input" value="Add Image" onclick="document.dispatchEvent(imageEvent)">
+                        </form>
+                    </div>
+                </div>
+                <input type="button" class="overlaybtn" id="delimage" value="Delete Image" onclick="DeleteDialogue('gallery')">
+                <input type="button" class="overlaybtn" id="updateimage" value="Update Image" onclick="">
+                <input type="button" class="overlaybtn" id="getimage" value="Get Image" onclick="">
+                <input type="button" class="overlaybtn" id="getimages" value="Get Images" onclick="">
+
+                <!--Event Stuff-->
+                <input class="overlaybtn" id="addevent" type="button" value="Add Event" onclick="openevents()">
+                <div class="devpanel_sch-false" id="devpanel_sch">
+                    <!--Add event window-->
+                    <div class="overlay_sch" id="eventparams">
+                        <form action="" method="post" class="send_form" id="schedule_form">
+                            <label for="event_name">Event Name</label>
+                            <input id="event_name" class="send_input" type="text"><br />
+                            <label for="event_description">Description</label>
+                            <input id="event_description" class="send_input" type="text"><br />
+                            <label for="event_date">Event Date</label>
+                            <input id="event_date" class="send_input"type="date"><br />
+                            <label for="event_time">Event Time</label>
+                            <input id="event_time" class="send_input"type="text"><br />
+                            <label for="event_location">Event Location</label>
+                            <input id="event_location" class="send_input" type="text"><br />
+                            <input type="button" class="send_input" value="Add Event" onclick="document.dispatchEvent(seventEvent)">
+                        </form>
+                    </div>
+                </div>
+                <input type="button" class="overlaybtn" id="delevent" value="Delete Event" onclick="DeleteDialogue('event')">
+                <input type="button" class="overlaybtn" id="updateevent" value="Update Event" onclick="">
+                <input type="button" class="overlaybtn" id="getevent" value="Get Event" onclick="">
+                <input type="button" class="overlaybtn" id="getevents" value="Get Events" onclick="">
+            </div>
+        </div>
+        <script src="./js/devlanding.js"></script>
+    </body>
+</html>

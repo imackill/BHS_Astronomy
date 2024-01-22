@@ -42,7 +42,6 @@ sEventRouter.post('/events', async(req: Request, res: Response) => {
     try{
         const event: sBaseEvent = req.body;
         const newEvent: sEvent = await sEventService.create(event);
-
         res.status(201).json(newEvent);
     }catch(err:any){
         res.status(500).send(err.message);

@@ -1,5 +1,5 @@
 import {v4 as uuidv4} from 'uuid';
-
+import * as fs from 'fs';
 import { BaseImage, Image } from './image.interface';
 import { Gallery } from './gallery.interface';
 
@@ -15,6 +15,10 @@ export const create = async (newImage: BaseImage): Promise<Image> => {
         id,
         ...newImage,
     };
+    let raw: Buffer = fs.readFileSync(`src/data.json`);
+    let raw_json = JSON.parse(raw.toString());
+    raw_json["gallery"] = gallery;
+    fs.writeFileSync(`src/data.json`, raw);
     return gallery[id]
 }
 

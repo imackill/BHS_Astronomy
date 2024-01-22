@@ -6,10 +6,17 @@ import * as path from 'path';
 import { sEventRouter } from './api/events/events.router';
 import { GalleryRouter } from './api/gallery/gallery.router';
 import { logger } from './util/logger';
+import { AuthRouter } from './api/auth.router';
+import * as fileUpload from 'express-fileupload';
+import { UploadRouter } from './api/uploads.router';
+
+export const textParser = express.text();
 
 let basepath = process.env.NODE_ENV == 'development' ? `src`: `dist`;
 
 const app = express();
+
+app.use(express.json());
 
 if (process.env.NODE_ENV !== "production") {
     logger.debug(`Logging initialized at debug level on date ${Date.now()}`);
@@ -27,8 +34,13 @@ function genauth(pat:string){
 
 app.use('/api/', sEventRouter);
 app.use('/api/', GalleryRouter);
+app.use('/api/', AuthRouter);
+app.use('/api/', UploadRouter);
+
+app.use(fileUpload(/*{ useTempFiles: true, tempFileDir: `/tmp/`}*/));
 
 app.use(express.static(path.join(__dirname, `../public`)));
+app.use(express.static(path.join(__dirname, `../uploads`)));
 
 app.use(favicon(path.join(process.cwd(), 'public/favicon.ico')));
 
