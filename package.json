@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
+    "types": "npm i @types/serve-favicon && npm i @types/express-fileupload && npm i @types/multiparty",
     "copy": "cp -R ./public/css/ ./dist/public/css/ && cp -R ./public/images/ ./dist/public/images/ && cp -R ./public/fonts/ ./dist/public/fonts/ && cp -R ./src/uploads/ ./dist/uploads/",
-    "build": "npm run clean && tsc && npm run copy",
+    "build": "npm run clean && tsc && npm run copy && npm run types",
     "start": "npm run build && node dist/src/server.js"
   },
   "repository": {
