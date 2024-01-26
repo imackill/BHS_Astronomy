@@ -1,6 +1,6 @@
 <h1>The Website for the BHS Astronomy Club</h1>
 Using Vanilla TypeScript
-An accessible website that's used by members of the BHS Astronomy Club to organize events and distribute info. Does not use any boilerplate or bundling program. Also contains the vscode launch profiles that I prefer, along with the necessary ENV variables. You can find the website [here](https://bhs-astronomy.onrender.com).
+An accessible website that's used by members of the BHS Astronomy Club to organize events and distribute info. Does not use any boilerplate or bundling program. Also contains the vscode launch profiles that I prefer, along with the necessary ENV variables. You can find the website here: https://bhs-astronomy.onrender.com
 
 By [Erasmusss](https://github.com/Erasmusss)
 
