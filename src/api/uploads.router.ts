@@ -10,7 +10,7 @@ export const UploadRouter = express.Router();
 UploadRouter.post("/uploads/", async(req: Request, res: Response) => {
     try{
         let form = new multiparty.Form();
-        form.parse(req, (err, fields, files) => {
+        form.parse(req, (err: any, fields: any, files: any) => {
             let file = files.file[0];
             let file_name: string = files.file[0].originalFilename
             let w_file = fs.readFileSync(file.path);
