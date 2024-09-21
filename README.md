@@ -2,7 +2,7 @@
 Using Vanilla TypeScript
 An accessible website that's used by members of the BHS Astronomy Club to organize events and distribute info. Does not use any boilerplate or bundling program. Also contains the vscode launch profiles that I prefer, along with the necessary ENV variables.
 
-By [Erasmusss](https://github.com/Erasmusss)
+By [Iain MacKillop](https://github.com/imackill)
 
 ---
 <h2>Dependencies</h2>
@@ -29,7 +29,7 @@ In terms of ENV variables, there's PORT, MAINPAT (for the main html page), DEVPA
 - [x] Custom (dynamic) Gallery Element
 - [x] Custom (dynamic) Schedule Element
 - [x] Set Up Main Page
-- [ ] Set Up Dev Page
+- [x] Set Up Dev Page
 - [ ] Host on WordPress (or Render)
 
 <h6>*not in any particular order</h6>
